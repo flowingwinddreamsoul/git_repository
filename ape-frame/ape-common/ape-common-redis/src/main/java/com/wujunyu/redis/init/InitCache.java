@@ -15,7 +15,7 @@ public class InitCache implements CommandLineRunner {
         Map<String, AbstractCache> beanMap = applicationContext.getBeansOfType(AbstractCache.class);
 
         if (beanMap.isEmpty()) {
-            return;
+            return ;
         }
         for (Map.Entry<String, AbstractCache> entry : beanMap.entrySet()) {
             AbstractCache abstractCache = (AbstractCache) SpringContextUtil.getBean(entry.getValue().getClass());
